@@ -4,6 +4,8 @@
     --colour-accent: #ff3400;
     --colour-headings: #1b0760;
     --colour-body: #918ca4;
+    --colour-border: #ccc;
+    --border-radius: 30px;
 }
 
 html{
@@ -234,6 +236,43 @@ a{
 
 @media screen and (min-width : 1024px){
     .btn{
+        font-size: 1.5rem;
+    }
+}
+
+/* Inputs */
+
+.input{
+    border-radius: var(--border-radius);
+    border: 1px solid var(--colour-border);
+    color: var(--colour-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+}
+
+::placeholder{
+    color: #cdcbd7;
+}
+
+.input-group{
+    border: 1px solid var(--colour-border);
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+.input-group .input{
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn{
+    margin: 4px;
+}
+
+@media screen and (min-width: 1024px){
+    .input{
         font-size: 1.5rem;
     }
 }
